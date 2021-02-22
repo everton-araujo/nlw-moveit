@@ -4,7 +4,7 @@ import './styles/global.css';
 
 function App() {
   return (
-    <div className='container'>
+    <div className="container">
       <ExperienceBar />
     </div>
   );
