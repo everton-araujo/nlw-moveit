@@ -3,6 +3,12 @@
   align-items: center;
 }
 
+@media(max-height: 600px) {
+  .profileContainer {
+    margin-top: 2rem;
+  }
+}
+
 .profileContainer > img {
   width: 5.5rem;
   height: 5.5rem;
@@ -27,3 +33,5 @@
 .profileContainer div p img {
   margin-right: 0.5rem;
 }
+
+
