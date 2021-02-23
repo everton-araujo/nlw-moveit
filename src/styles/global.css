@@ -85,5 +85,5 @@ a {
 span.current-experience {
   position: absolute;
   top: 12px;
-  transform: translateX(-25%);
+  transform: translateX(-50%);
 }
