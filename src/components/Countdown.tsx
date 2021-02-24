@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
 
 import styles from '../styles/components/Countdown.module.css';
 
@@ -51,12 +52,17 @@ export function Countdown() {
       </div>
 
       { hasFinished ? (
-        <button 
-          disabled
-          className={styles.countdownButton}
-        >
-          Ciclo Encerrado
-        </button>
+        <>
+          <button 
+            disabled
+            className={styles.countdownButton}
+          >
+            Ciclo Encerrado
+            <FaCheckCircle className={styles.ButtonIcon}/>
+          </button>
+
+          <div className={styles.buttonBar}>&nbsp;</div>
+        </>
       ) : (
         <>
           { isActive ? (

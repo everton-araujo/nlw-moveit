@@ -76,4 +76,18 @@
   background: var(--white);
   color: var(--text);
   cursor: not-allowed;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.ButtonIcon {
+  margin-left: 16px;
+  color: var(--green);
+}
+
+.buttonBar {
+  background: var(--green);
+  height: 0.3rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
