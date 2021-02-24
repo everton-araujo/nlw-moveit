@@ -3,7 +3,7 @@
   align-items: center;
 }
 
-@media(max-height: 600px) {
+@media(max-height: 700px) {
   .profileContainer {
     margin-top: 2rem;
   }
