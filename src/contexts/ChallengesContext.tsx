@@ -13,9 +13,11 @@ interface ChallengesContextData {
   challengesCompleted: number
   activeChallenge: Challenge;
   experienceToLevelUp: number;
+  pastExperienceToLevelUp: number;
   levelUp: () => void;
   startNewChallenge: () => void;
   resetChallenge: () => void;
+  earnExperience: () => void;
 }
 
 interface IChallengesProviderProps {
@@ -29,22 +31,35 @@ export function ChallengesProvider({ children }: IChallengesProviderProps) {
   const [currentExperience, setCurrentExperience] = useState(0);
   const [challengesCompleted, setChallengesCompleted] = useState(0);
   const [activeChallenge, setActiveChallenge] = useState(null);
+  const [pastExperienceToLevelUp, setPastExperienceToLevelUp] = useState(0);
 
   const experienceToLevelUp = Math.pow((level + 1) * 4, 2);
+  let hp = 1;
 
   function levelUp() {
     setLevel(level + 1);
+    setPastExperienceToLevelUp(experienceToLevelUp);
   }
 
   function startNewChallenge() {
     const randomChallengesIndex = Math.floor(Math.random() * challenges.length);
     const challenge = challenges[randomChallengesIndex];
-
+    
     setActiveChallenge(challenge);
   }
-
+  
   function resetChallenge() {
     setActiveChallenge(null);
+  }
+  
+  function earnExperience() {
+    setChallengesCompleted(challengesCompleted + 1);
+    setCurrentExperience(currentExperience + activeChallenge.amount);
+    
+    if(currentExperience >= experienceToLevelUp) {
+      levelUp();
+      experienceToLevelUp;
+    }
   }
 
   return (
@@ -55,9 +70,11 @@ export function ChallengesProvider({ children }: IChallengesProviderProps) {
         challengesCompleted, 
         activeChallenge,
         experienceToLevelUp,
+        pastExperienceToLevelUp,
         levelUp,
         startNewChallenge,
         resetChallenge,
+        earnExperience,
       }}
     >
       { children }
