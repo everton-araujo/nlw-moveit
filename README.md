@@ -5,6 +5,12 @@ The objective of the project is to force the user to take a break every 25 minut
 
 When the timer reach zero a sound notification on the browser was triggered and a new challenge appears. If the user completes the challenge, he earn experience points, when earned enough experience points, the user level up.
 
+##### Functionalities added besides the event
+
+* Experience points bar moving dynamic;
+* Current experience incresses dynamic;
+[](/src/assets/xpbar.gif)
+
 ### How to run locally
 To run the application is needed to clone the repository on the directory that the application will be in your computer using the following command: `git clone https://github.com/everton-araujo/nlw-moveit.git`.
 
