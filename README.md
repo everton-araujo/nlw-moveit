@@ -1,5 +1,5 @@
 # About the Project
-Move it was build during the 4º edition of <a href="https://nextlevelweek.com/" target="_blank">Next Level Week</a> event by <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>.
+Move it was build during the 4º edition of [Next Level Week](https://nextlevelweek.com/) event by [Rocketseat](https://rocketseat.com.br/).
 
 
 The objective of the project is to force the user to take a break every 25 minutes and do an exercise before continue using the computer.
