@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
+import ThemeSwitcher from "react-theme-switcher";
 
 import { CompletedChallenges } from "../components/CompletedChallenges";
 import { Countdown } from "../components/Countdown";
@@ -30,6 +31,17 @@ export default function Home(props: IHomeProps) {
         </Head>
 
         <ExperienceBar />
+
+        <div className="toggleThemeButton">
+          <ThemeSwitcher 
+            cssSelector="body"
+            switcherColor="#5965E0"
+            darkColor="#515357"
+            lightColor="#ffffff"
+            lightTextColor="#666666"
+            darkTextColor="#ffffff"
+          />
+        </div>
 
         <CountdownProvider>
           <section>

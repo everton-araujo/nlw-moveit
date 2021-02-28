@@ -12,6 +12,7 @@
   justify-content: center;
 
   text-align: center;
+  color: var(--title);
 }
 
 .challengeNotActive {
@@ -60,6 +61,7 @@
   flex-direction: column;
   align-tracks: center;
   justify-content: center;
+  color: var(--title)
 }
 
 .challengeActive main strong {
